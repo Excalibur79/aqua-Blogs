@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AquaBlogs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info my-navbar">
+         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-pie-chart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>
+</svg>
+         <a class="navbar-brand title-heading" href="#">Aqua<span style="letter-spacing:2px">BLOGS</span></a>
+
+
+  <div id="flex2" class="navbar-nav ml-auto "  >
+
+      <li >
+        <a class="nav-link" href="/blogs/about">About</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/blogs/new">Create</a>
+      </li>
+
+
+
+
+
+  </div>
+</nav>
+
+
+
+
+<div class="container my-containerindex">
+        <div class="row my-rowindex">
+            <% for(var i=0;i< database.length;i++){ %>
+                    <div class="col-lg-6 col-sm-12 my-columnindex ">
+                        <div class="my-card bg-info">
+                                <p class="title-index bg-dark"><span><%= database[i].title %></span></p>
+                                <p class="image-index"><span><img src=" <%= database[i].image %> " ></span></p>
+                                <p class="content-index bg-info"><span><strong>Content:</strong><%= database[i].body.substring(0,100) %>....</span></p>
+                                <p class="date-index bg-info"><span><strong>Date created:</strong><%= database[i].created.toDateString() %></span></p>
+                                <a href="/blogs/<%= database[i].id %>" ><button class="btn  btn-light button-index">See More
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
+</svg>
+
+
+
+                                </button></a>
+                         </div>
+                    </div>
+            <% } %>
+         </div>
+</div>
+</body>
+</html>

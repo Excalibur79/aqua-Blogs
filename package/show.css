@@ -1,0 +1,161 @@
+li
+{
+    font-weight:bold;
+
+    margin-left:8px;
+}
+li a
+{
+    font-size:110%;
+}
+svg
+{
+    margin-right:7px;
+}
+.title-heading
+{
+    font-size:170%;
+    margin-left:6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.my-container
+{
+}
+.flexbox
+{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    border:0.5px solid #CACFD2;
+    padding:10px;
+    margin-top:70px;
+
+}
+.flexbox p
+{
+
+}
+.top
+{
+
+
+    font-size:130%;
+    color:#ECF0F1 ;
+    border-radius:5px;
+    border:1px solid #2980B9 ;
+    display:flex;
+    justify-content:space-around;
+    padding:20px;
+
+
+}
+.font-title
+{
+    letter-spacing:3px;
+    font-family: 'Sora', sans-serif;
+    font-weight:bold;
+}
+.toppart
+{
+    position:relative;
+    top:4px;
+    display:flex;
+
+    vertical-align:middle;
+}
+
+.flex
+{
+
+    display:flex;
+
+}
+.flex div{
+    width:60%;
+
+    height:200px;
+
+
+}
+
+img
+{
+
+    text-align:center;
+    margin:15px;
+     height:320px;
+
+
+}
+.blog-content
+{
+    padding:17px;
+    color:white;
+    background-color:#979A9A ;
+    border-radius:5px;
+}
+.flexbox div
+{
+
+    padding:8px;
+    margin-top:4px;
+}
+.buttons
+{
+
+    display:flex;
+    justify-content:space-around;
+}
+.buttons form
+{
+
+    width:200%;
+    justify-content:space-around;
+}
+button
+{
+
+    width:50%;
+    flex:5;
+    text-align:center;
+
+}
+
+@media(max-width:414px)
+{
+    img
+    {
+       margin:0px;
+    }
+    .flexbox
+    {
+        width:100%;
+    }
+    .toppart
+    {
+        font-size:80%;
+
+    }
+    .top
+    {
+        padding:10px;
+
+
+    }
+
+}

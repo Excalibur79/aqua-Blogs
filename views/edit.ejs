@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/new.css">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-info my-navbar">
+         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-pie-chart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+             <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>
+         </svg>
+         <a class="navbar-brand title-heading" href="#">Aqua<span style="letter-spacing:2px">BLOGS</span></a>
+
+
+          <div id="flex2" class="navbar-nav ml-auto "  >
+
+              <li >
+                <a class="nav-link" href="/blogs">Home</a>
+              </li>
+
+          </div>
+ </nav>
+
+
+
+
+
+
+        <div class="container my-container">
+            <div class="flex-form">
+                <h1>Edit <%= data.title %></h1>
+                <form class="form-group" action="/blogs/<%= data._id %>?_method=PUT" method="POST">
+                     <div><input class="form-control item" type="text" name="name" value="<%= data.name %>">  </div>
+                    <div><input class="form-control item" type="text" name="title" value=" <%= data.title %>"> </div>
+                    <div><input class="form-control item" type="text" name="image" value=" <%= data.image %>"> </div>
+                     <div><input class="form-control item " type="text" name="blogkey" placeholder="Enter the Blogkey for this Blog"> </div>
+                    <div><textarea class="form-control item" id="blog-content" type="text" name="body" > <%= data.body %> </textarea></div>
+                    <div><button class="btn btn-info " type="submit">Update</button></div>
+                </form>
+            </div>
+        </div>
+
+
+
+</body>
+</html>
